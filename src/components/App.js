@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Header from "./Header";
-import CovApi from "../api/CovApi";
+import { worldData } from "../api/CovApi";
+import axios from "axios";
+import CountryDropDown from "../components/CountryDropDown";
 
 const App = () => {
 
     return (
         <div className="appContainer" >
             <Header />
+            <CountryDropDown />
         </div>
     );
 };

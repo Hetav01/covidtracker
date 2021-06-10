@@ -1,5 +1,8 @@
 import axios from "axios";
 
-export default axios.create({
-    baseURL: "https://covid19.mathdro.id/api"
-});
+export const worldData = async () => {
+    const response = await axios.get("https://covid19.mathdro.id/api");
+    console.log(response.data);
+
+    return response;
+};
