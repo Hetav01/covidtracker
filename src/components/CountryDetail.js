@@ -8,14 +8,11 @@ const CountryDetail = ({selectedCountry, countryData}) => {
     const [ confirmed, setConfirmed ] = useState({});
     const [ deaths, setDeaths ] = useState({});
     const [ recovered, setRecovered ] = useState({});
-
-    const [ countryConfirmed, setcountryConfirmed ] = useState({});
-    const [ countryDeaths, setcountryDeaths ] = useState({});
-    const [ countryRecovered, setcountryRecovered ] = useState({}); 
-
-
-    const [ value, setValue ] = useState({ confirmed: null, deaths: null, recovered: null });  
-
+    // unnecessary code
+    // const [ countryConfirmed, setcountryConfirmed ] = useState({});
+    // const [ countryDeaths, setcountryDeaths ] = useState({});
+    // const [ countryRecovered, setcountryRecovered ] = useState({}); 
+    // const [ value, setValue ] = useState({ confirmed: null, deaths: null, recovered: null });  
 
     useEffect(() => {
         worldData().then(data => {
@@ -24,14 +21,15 @@ const CountryDetail = ({selectedCountry, countryData}) => {
             setDeaths(data.data.deaths);
             setRecovered(data.data.recovered);
         });
-        if (countryData.status) {
-            setValue({ confirmed: countryData.data.confirmed, deaths: countryData.data.deaths, recovered: countryData.data.recovered})
-        }
-        console.log(value);
-        console.log(countryData.data);
-        console.log("tst");
+        // unnecessary code
+        // if (countryData.status) {
+        //     setValue({ confirmed: countryData.data.confirmed, deaths: countryData.data.deaths, recovered: countryData.data.recovered})
+        // }
+        // console.log(value);
+        // console.log(countryData.data);
+        // console.log("tst");
     }, []);
-    
+
     if (!selectedCountry) {
         return (
             <div className="countryDetailsContainer" >
@@ -54,18 +52,18 @@ const CountryDetail = ({selectedCountry, countryData}) => {
 
     return (
         <div className="countryDetailsContainer" >
-            {/* <div className="infectedContainer">
-                <div className="infectedNumber">{countryData.status ? countryConfirmed.value : null}</div>
+            <div className="infectedContainer">
+                <div className="infectedNumber">{countryData.status? countryData.data.confirmed.value : 'null'}</div>
                 <div className="infectedText">Infected</div>
             </div>
             <div className="deathsContainer">
-                <div className="deathsNumber">{countryData.status ? countryData.value : null}</div>
+                <div className="deathsNumber">{countryData.status? countryData.data.deaths.value : 'null'}</div>
                 <div className="deathsText">Deaths</div>
             </div>
             <div className="recoveredContainer">
-                <div className="recoveredNumber">{countryData.status ? countryRecovered.value : null}</div>
+                <div className="recoveredNumber">{countryData.status? countryData.data.recovered.value : 'null'}</div>
                 <div className="recoveredText">Recovered</div>
-            </div> */}
+            </div>
         </div>
     );
 };

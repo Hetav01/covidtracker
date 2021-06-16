@@ -13,6 +13,6 @@ export const countryList = async () => {
 };
 
 
-export const fetchCountryData = async (country) => {
-    return await axios.get(`${baseURL}/countries/${country}`);
+export const fetchCountryData = (country) => {
+    return axios.get(`${baseURL}/countries/${country}`);
 };
