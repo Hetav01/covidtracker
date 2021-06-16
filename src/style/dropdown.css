@@ -37,7 +37,7 @@
 }
 
 .MuiInput-underline:not(.Mui-disabled):before {
-    border-color: #161625 !important;
+    border-color: #0f0f14 !important;
 }
 
 
@@ -56,6 +56,6 @@
     font-family: 'Archivo', sans-serif !important;
     font-weight: 700 !important;
     padding: 30px 10px 10px 10px !important;
-    background-color: #161625 !important;
+    background-color: #0f0f14 !important;
     border: 0px 0px 0px 0px !important;
 }

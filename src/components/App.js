@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from "./Header";
 import { fetchCountryData } from "../api/CovApi";
 import CountryDropDown from "../components/CountryDropDown";
+import CountryDetail from "../components/CountryDetail";
 
 const App = () => {
     const [ country, setCountry ] = useState("");
@@ -16,10 +17,12 @@ const App = () => {
     console.log(countryData);
 
 
+
     return (
         <div className="appContainer" >
             <Header />
             <CountryDropDown handleCountryChange={handleCountryChange} />
+            <CountryDetail handleCountryChange={handleCountryChange} />
         </div>
     );
 };

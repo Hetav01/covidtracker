@@ -13,7 +13,6 @@ const CountryDropDown = ({ handleCountryChange }) => {
         const listCountries = async () => {
             setCountries(await countryList());
         };
-        setCountries([...countries, "World"]);
         listCountries();
     }, []);
     
@@ -31,7 +30,7 @@ const CountryDropDown = ({ handleCountryChange }) => {
     return (
         <Box className="boxContainer" justifyContent="center" alignItems="center" display="flex" flexDirection="column">
             <FormControl className="formControl">
-                <NativeSelect className="nativeSelect" defaultValue="" onChange={(e) => {handleCountryChange(e.target.value); findSelectedCountry(e.target.value);}} >
+                <NativeSelect className="nativeSelect" defaultValue="World" onChange={(e) => {handleCountryChange(e.target.value); findSelectedCountry(e.target.value);}} >
                     <option className="options" value="">World</option>
                     {mapCountries}
                 </NativeSelect>
