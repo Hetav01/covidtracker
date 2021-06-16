@@ -6,13 +6,15 @@ const Header = (props) => {
         <div className="headerContainer">
             <div className="linkTray">
                 <div className="homeIcon">
-                    <svg className="homeSVG" version="1.1" id="Capa_1" viewBox="0 0 230.262 230.262">
+                    <a href="/" >
+                        <svg className="homeSVG" version="1.1" id="Capa_1" viewBox="0 0 230.262 230.262">
                             <path d="M228.065,125.587l-51.619-51.615V23.263c0-4.142-3.357-7.5-7.5-7.5c-4.143,0-7.5,3.358-7.5,7.5v35.709L120.43,17.96
                                 c-2.928-2.929-7.677-2.928-10.606,0L2.197,125.587c-2.929,2.929-2.929,7.678,0,10.606c2.93,2.929,7.678,2.929,10.608,0l18.72-18.72
                                 v89.525c0,4.142,3.357,7.5,7.5,7.5h152.215c4.143,0,7.5-3.358,7.5-7.5v-89.524l18.721,18.719c1.464,1.464,3.384,2.196,5.303,2.196
                                 c1.919,0,3.839-0.732,5.304-2.197C230.994,133.264,230.994,128.516,228.065,125.587z M183.739,199.499H46.524v-97.025l68.604-68.604
                                 l68.611,68.606V199.499z"/>
-                    </svg>
+                        </svg>
+                    </a>
                 </div>
                 <div className="githubIcon">
                     <svg className="githubSVG" version="1.1" id="Layer_1" viewBox="0 0 291.32 291.32">
@@ -32,7 +34,7 @@ const Header = (props) => {
             </div>
             <div className="headingContainer">
                 <div className="headingBox">
-                    <span className="span1">Covid-19</span>
+                    <span className="span1">COVID-19</span>
                     <span className="span2"> Tracker</span>
                 </div>
             </div>

@@ -1,0 +1,15 @@
+.nameContainer {
+    color: #fff;
+}
+
+.selectedCountry {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.dateToday {
+    font-weight: lighter;
+    font-size: 1.8rem;
+    color: #DC855A;
+    letter-spacing: 0.2rem
+}
