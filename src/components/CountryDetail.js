@@ -33,17 +33,17 @@ const CountryDetail = ({selectedCountry, countryData}) => {
     if (!selectedCountry) {
         return (
             <div className="countryDetailsContainer" >
-                <div className="infectedContainer">
-                    <div className="infectedNumber">{confirmed.value}</div>
-                    <div className="infectedText">Infected</div>
+                <div className="infectedContainer dataContainer">
+                    <div className="infectedNumber value">{confirmed.value}</div>
+                    <div className="infectedText text">Infected</div>
                 </div>
-                <div className="deathsContainer">
-                    <div className="deathsNumber">{deaths.value}</div>
-                    <div className="deathsText">Deaths</div>
+                <div className="deathsContainer dataContainer">
+                    <div className="deathsNumber value">{deaths.value}</div>
+                    <div className="deathsText text">Deaths</div>
                 </div>
-                <div className="recoveredContainer">
-                    <div className="recoveredNumber">{recovered.value}</div>
-                    <div className="recoveredText">Recovered</div>
+                <div className="recoveredContainer dataContainer">
+                    <div className="recoveredNumber value">{recovered.value}</div>
+                    <div className="recoveredText text">Recovered</div>
                 </div>
             </div>
         )
@@ -52,17 +52,17 @@ const CountryDetail = ({selectedCountry, countryData}) => {
 
     return (
         <div className="countryDetailsContainer" >
-            <div className="infectedContainer">
-                <div className="infectedNumber">{countryData.status? countryData.data.confirmed.value : 'null'}</div>
-                <div className="infectedText">Infected</div>
+            <div className="infectedContainer dataContainer">
+                <div className="infectedNumber value">{countryData.status? countryData.data.confirmed.value : 'null'}</div>
+                <div className="infectedText text">Infected</div>
             </div>
-            <div className="deathsContainer">
-                <div className="deathsNumber">{countryData.status? countryData.data.deaths.value : 'null'}</div>
-                <div className="deathsText">Deaths</div>
+            <div className="deathsContainer dataContainer">
+                <div className="deathsNumber value">{countryData.status? countryData.data.deaths.value : 'null'}</div>
+                <div className="deathsText text">Deaths</div>
             </div>
-            <div className="recoveredContainer">
-                <div className="recoveredNumber">{countryData.status? countryData.data.recovered.value : 'null'}</div>
-                <div className="recoveredText">Recovered</div>
+            <div className="recoveredContainer dataContainer">
+                <div className="recoveredNumber value">{countryData.status? countryData.data.recovered.value : 'null'}</div>
+                <div className="recoveredText text">Recovered</div>
             </div>
         </div>
     );
