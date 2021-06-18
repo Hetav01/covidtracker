@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../style/countryDetail.css";
 import { worldData } from "../api/CovApi";
-
+/* import CountUp from "react-countup"; */
 const CountryDetail = ({selectedCountry, countryData}) => {
 
     const [ worldsData, setWorldsData ] = useState({});
@@ -30,12 +30,25 @@ const CountryDetail = ({selectedCountry, countryData}) => {
         // console.log("tst");
     }, []);
 
+    /* <CountUp
+        start={0}
+        end={countryData.confirmed.value}
+        duration={2.5}
+    >
+        {({ countUpRef}) => (
+            <div>
+                <span ref={countUpRef}></span>
+            </div>
+        )}
+    </CountUp>
+    */
+
     if (!selectedCountry) {
         return (
             <div className="countryDetailsContainer" >
                 <div className="infectedContainer dataContainer">
                     <div className="infectedNumber value">{confirmed.value}</div>
-                    <div className="infectedText text">Infected</div>
+                    <div className="infectedText text">Confirmed</div>
                 </div>
                 <div className="deathsContainer dataContainer">
                     <div className="deathsNumber value">{deaths.value}</div>
@@ -53,15 +66,15 @@ const CountryDetail = ({selectedCountry, countryData}) => {
     return (
         <div className="countryDetailsContainer" >
             <div className="infectedContainer dataContainer">
-                <div className="infectedNumber value">{countryData.status? countryData.data.confirmed.value : 'null'}</div>
-                <div className="infectedText text">Infected</div>
+                <div className="infectedNumber value">{countryData.status? countryData.data.confirmed.value : -1}</div>
+                <div className="infectedText text">Confirmed</div>
             </div>
             <div className="deathsContainer dataContainer">
-                <div className="deathsNumber value">{countryData.status? countryData.data.deaths.value : 'null'}</div>
+                <div className="deathsNumber value">{countryData.status? countryData.data.deaths.value : -1}</div>
                 <div className="deathsText text">Deaths</div>
             </div>
             <div className="recoveredContainer dataContainer">
-                <div className="recoveredNumber value">{countryData.status? countryData.data.recovered.value : 'null'}</div>
+                <div className="recoveredNumber value">{countryData.status? countryData.data.recovered.value : -1}</div>
                 <div className="recoveredText text">Recovered</div>
             </div>
         </div>
