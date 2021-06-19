@@ -8,4 +8,7 @@
     margin-right: 2%;
     order: 4;
     flex: 1;
+    background-color: rgba(54, 54, 54, 0.397);
+    border-radius: 25px;
+    padding: 20px 15px 20px 15px;
 }

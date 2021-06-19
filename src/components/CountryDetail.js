@@ -66,15 +66,15 @@ const CountryDetail = ({selectedCountry, countryData}) => {
     return (
         <div className="countryDetailsContainer" >
             <div className="infectedContainer dataContainer">
-                <div className="infectedNumber value">{countryData.status? countryData.data.confirmed.value : -1}</div>
+                <div className="infectedNumber value">{countryData.status? countryData.data.confirmed.value : confirmed.value}</div>
                 <div className="infectedText text">Confirmed</div>
             </div>
             <div className="deathsContainer dataContainer">
-                <div className="deathsNumber value">{countryData.status? countryData.data.deaths.value : -1}</div>
+                <div className="deathsNumber value">{countryData.status? countryData.data.deaths.value : deaths.value}</div>
                 <div className="deathsText text">Deaths</div>
             </div>
             <div className="recoveredContainer dataContainer">
-                <div className="recoveredNumber value">{countryData.status? countryData.data.recovered.value : -1}</div>
+                <div className="recoveredNumber value">{countryData.status? countryData.data.recovered.value : deaths.value}</div>
                 <div className="recoveredText text">Recovered</div>
             </div>
         </div>

@@ -16,3 +16,8 @@ export const countryList = async () => {
 export const fetchCountryData = (country) => {
     return axios.get(`${baseURL}/countries/${country}`);
 };
+
+export const fetchDailyData = async () => {
+    const response = await axios.get(`${baseURL}/daily`);
+    return response;
+}

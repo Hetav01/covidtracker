@@ -3,9 +3,11 @@ import { NativeSelect, FormControl, Box } from '@material-ui/core';
 import "../style/dropdown.css";
 import { countryList } from "../api/CovApi";
 import { fetchCountryData } from "../api/CovApi";
+import { worldData } from "../api/CovApi";
 import CountryName from "./CountryName";
 import CountryDetail from "../components/CountryDetail";
 import Chart1 from "../components/Chart1";
+import Chart2 from "../components/Chart2";
 
 //this is the main parent component now.
 /* 
@@ -41,7 +43,7 @@ const CountryDropDown = ({ handleCountryChange}) => {
         return (
             <option className="options" key={i} value={country}>{country}</option>
         );
-    });
+    }); 
 
     return (
         <Box className="boxContainer" justifyContent="center" alignItems="center" display="flex" flexDirection="column">
@@ -54,6 +56,7 @@ const CountryDropDown = ({ handleCountryChange}) => {
             <CountryName className="countryNameContainer" selectedCountry={selectedCountry}/>
             <CountryDetail className="countryDetailContainer" selectedCountry={selectedCountry} countryData={countryData} />
             <Chart1 className="chart1Container" countryData={countryData} selectedCountry={selectedCountry} />
+            <Chart2 />
         </Box>
     );
 };
