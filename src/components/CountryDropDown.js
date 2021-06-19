@@ -49,7 +49,6 @@ const CountryDropDown = ({ handleCountryChange}) => {
         <Box className="boxContainer" justifyContent="center" alignItems="center" display="flex" flexDirection="column">
             <FormControl className="formControl">
                 <NativeSelect className="nativeSelect" defaultValue="World" onChange={(e) => {handleCountryChange(e.target.value); findSelectedCountry(e.target.value); handleCountryData(e.target.value);}} >
-                    <option className="options" value="">World</option>
                     {mapCountries}
                 </NativeSelect>
             </FormControl>
@@ -62,3 +61,5 @@ const CountryDropDown = ({ handleCountryChange}) => {
 };
 
 export default CountryDropDown;
+
+//                    <option className="options" value="">World</option>
