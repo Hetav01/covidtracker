@@ -59,3 +59,9 @@
     background-color: #0f0f14 !important;
     border: 0px 0px 0px 0px !important;
 }
+
+@media only screen and (max-width: 770px) {
+    .boxContainer {
+        width: 100%;
+    }
+}
