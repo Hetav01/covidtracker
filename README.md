@@ -1,3 +1,14 @@
+# [`Covid Tracker App`](https://covidtracker-teal.vercel.app)
+
+This project illustrates the use of basic hooks properly and is in the intial stage of completion.
+
+Needs more and features but still in working condition.
+
+## APIs Used: [Covid Tracker API](https://covid19.mathdro.id/api), [Lodash](https://www.lodash.com), [Chartjs](https://www.chartjs.org/).
+
+## ![Test Image](https://github.com/Hetav01/covidtracker/blob/main/src/style/Screenshot%202021-06-20%20123709.jpg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
