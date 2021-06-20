@@ -6,9 +6,7 @@ import { fetchCountryData } from "../api/CovApi";
 import { worldData } from "../api/CovApi";
 import CountryName from "./CountryName";
 import CountryDetail from "../components/CountryDetail";
-import Chart1 from "../components/Chart1";
-import Chart2 from "../components/Chart2";
-
+import Chart from "./Chart";
 //this is the main parent component now.
 /* 
     fetchCountryData(selectedCountry).then(data => {
@@ -54,8 +52,7 @@ const CountryDropDown = ({ handleCountryChange}) => {
             </FormControl>
             <CountryName className="countryNameContainer" selectedCountry={selectedCountry}/>
             <CountryDetail className="countryDetailContainer" selectedCountry={selectedCountry} countryData={countryData} />
-            <Chart1 className="chart1Container" countryData={countryData} selectedCountry={selectedCountry} />
-            <Chart2 />
+            <Chart className="chart1Container" countryData={countryData} selectedCountry={selectedCountry} />
         </Box>
     );
 };
